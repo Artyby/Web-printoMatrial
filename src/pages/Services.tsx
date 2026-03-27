@@ -3,15 +3,12 @@ import { Link } from "react-router-dom";
 import {
   Layers,
   Zap,
-  Box,
-  Patch,
+  Sparkles,
+  Aperture,
   Ruler,
   CheckCircle2,
   ChevronRight,
 } from "lucide-react";
-
-// ─── Use Aperture instead of Patch (lucide doesn't have Patch) ───
-import { Aperture } from "lucide-react";
 
 const SERVICES = [
   {
@@ -42,7 +39,7 @@ const SERVICES = [
     border: "border-yellow-400/20",
   },
   {
-    icon: Box,
+    icon: Sparkles,
     tag: "PUFF",
     title: "Efecto Puff 3D",
     subtitle: "Relieve Térmico Premium",
