@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation, Outlet } from "react-router-dom";
 import { Menu } from "lucide-react";
-import { cn } from "../lib/utils";
+import { cn } from "../../lib/utils";
 import {
   Sheet,
   SheetContent,

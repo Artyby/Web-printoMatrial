@@ -18,14 +18,14 @@ import {
   AlertCircle,
 } from "lucide-react";
 import { cn } from "../lib/utils";
-import { Dialog, DialogContent, DialogClose } from "../../components/ui/dialog";
+import { Dialog, DialogContent, DialogClose } from "../components/ui/dialog";
 import {
   Sheet,
   SheetContent,
   SheetHeader,
   SheetTitle,
   SheetClose,
-} from "../../components/ui/sheet";
+} from "../components/ui/sheet";
 
 // ============================================
 // CATEGORIES
@@ -536,7 +536,7 @@ export default function Gallery() {
       {/* ── LIGHTBOX ── */}
       <Dialog
         open={!!lightboxItem}
-        onOpenChange={(open) => !open && setLightboxItem(null)}
+        onOpenChange={(open: boolean) => !open && setLightboxItem(null)}
       >
         <DialogContent className="max-w-4xl w-full bg-background/95 backdrop-blur border-border p-0 overflow-hidden">
           {lightboxItem && (
@@ -563,7 +563,10 @@ export default function Gallery() {
       </Dialog>
 
       {/* ── ADD ITEM PANEL ── */}
-      <Sheet open={isPanelOpen} onOpenChange={(open) => !open && togglePanel()}>
+      <Sheet
+        open={isPanelOpen}
+        onOpenChange={(open: boolean) => !open && togglePanel()}
+      >
         <SheetContent
           side="right"
           className="bg-card border-border w-full max-w-md overflow-y-auto"

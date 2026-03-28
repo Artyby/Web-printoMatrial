@@ -3,7 +3,7 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { ChevronRight, Zap, Shield, Clock } from "lucide-react";
-import Calculator from "../../components/Calculator";
+import Calculator from "../components/Calculator";
 
 const BADGES = [
   { icon: Zap, label: "Alta Resolución" },
