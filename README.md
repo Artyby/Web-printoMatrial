@@ -108,13 +108,6 @@ pnpm preview
 - **Vercel/Netlify**: `pnpm build` → deploy `dist/`.
 - **Config**: Asegura env vars en plataforma.
 
-## 🤝 Contribuir
-
-1. Fork → Clone.
-2. `pnpm install`.
-3. Crea branch `feat/xxx`.
-4. PR a `main`.
-
 ## 📄 Licencia
 
 MIT © PrintoMaterial Team
