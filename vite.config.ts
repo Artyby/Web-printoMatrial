@@ -3,6 +3,7 @@ import react from "@vitejs/plugin-react";
 import path from "path";
 
 export default defineConfig({
+  base: "/", // Explicit root for production
   plugins: [react()],
   resolve: {
     alias: {
@@ -25,5 +26,10 @@ export default defineConfig({
       },
     },
     chunkSizeWarningLimit: 600,
+  },
+  preview: {
+    port: 4173,
+    open: true,
+    // Production preview: BrowserRouter works automatically with base: '/'
   },
 });

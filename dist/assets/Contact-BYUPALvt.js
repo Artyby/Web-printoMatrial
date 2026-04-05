@@ -1,4 +1,4 @@
-import{j as e,H as u}from"./index-CQwbP3Rv.js";import{r as d}from"./vendor-CoQMDmVI.js";import{m as h,n as i,o as b,p as g,q as j}from"./ui-BCdSodxB.js";const f=["Impresión DTF","Vinil Textil","Efecto Puff 3D","Parches Termoadhesivos","Otro / Consulta General"],v="18097167077";function N(s){return encodeURIComponent(`Hola Printo-Material! 👋
+import{j as e,H as u}from"./index-DF_fufuH.js";import{r as d}from"./vendor-CoQMDmVI.js";import{m as h,n as i,o as b,p as g,q as j}from"./ui-BCdSodxB.js";const f=["Impresión DTF","Vinil Textil","Efecto Puff 3D","Parches Termoadhesivos","Otro / Consulta General"],v="18097167077";function N(s){return encodeURIComponent(`Hola Printo-Material! 👋
 
 *Nombre:* ${s.name}
 *Email:* ${s.email}

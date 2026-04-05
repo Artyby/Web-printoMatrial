@@ -66,6 +66,13 @@ pnpm build
 pnpm preview
 ```
 
+**🧪 Test routing producción local:**
+
+```
+http://localhost:4173/gallery  ✅ No 404
+http://localhost:4173/services ✅ Funciona refresh
+```
+
 ## 📁 Estructura del Proyecto
 
 ```
@@ -105,8 +112,44 @@ pnpm preview
 
 ## 🚀 Despliegue
 
-- **Vercel/Netlify**: `pnpm build` → deploy `dist/`.
-- **Config**: Asegura env vars en plataforma.
+### 🔧 **Routing SPA (IMPORTANTE - Fix 404s)**
+
+**Problema común**: Refresh en `/gallery` → 404 en producción.
+
+**Soluciones automáticas (recomendado):**
+
+```
+✅ Vercel/Netlify: Auto SPA routing
+✅ GitHub Pages: Crea _redirects con /*
+✅ Firebase Hosting: rewrites en firebase.json
+```
+
+**Manual (Apache/Nginx):**
+
+```apache
+# Apache .htaccess
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.html [L]
+```
+
+**Vite config aplicado:**
+
+```
+base: '/'  ✅ Root deploy
+preview:   ✅ Test local producción
+```
+
+### Plataformas
+
+| Plataforma   | Config Auto  | Env Vars       | Comando      |
+| ------------ | ------------ | -------------- | ------------ |
+| Vercel       | ✅ SPA       | Dashboard      | `pnpm build` |
+| Netlify      | ✅ SPA       | Dashboard      | `pnpm build` |
+| GitHub Pages | `_redirects` | GitHub Secrets | `pnpm build` |
+
+**Variables requeridas**: `VITE_SUPABASE_URL`, `VITE_SUPABASE_ANON_KEY`
 
 ## 📄 Licencia
 
